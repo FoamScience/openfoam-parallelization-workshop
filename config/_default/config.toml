@@ -1,4 +1,4 @@
-baseurl = "https://3925-2a02-908-1864-7fc0-944d-b241-e709-cd55.eu.ngrok.io/"
+baseurl = "https://foamscience.github.io/openfoam-parallelization-workshop"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
