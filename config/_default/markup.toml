@@ -13,7 +13,7 @@ defaultMarkdownHandler = "goldmark"
     unsafe = true
 
 [highlight]
-  codeFences = false
+  codeFences = true
   guessSyntax = false
   hl_Lines = ""
   lineNoStart = 1
@@ -25,5 +25,5 @@ defaultMarkdownHandler = "goldmark"
 
 [tableOfContents]
   endLevel = 3
-  ordered = false
+  ordered = true
   startLevel = 2

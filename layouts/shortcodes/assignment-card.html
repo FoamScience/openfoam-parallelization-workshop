@@ -1,0 +1,20 @@
+<div class='card-bar'></div>
+<div class='card-body'>
+    <a href='{{ with .Get 1 -}}{{ . | safeHTML }}{{ else -}}{{ errorf "No href provided"}}{{ end -}}' class='btn btn-primary w-40' style='float:right;'>
+        Accept assignment
+    </a>
+    <div class='btn w-40 {{ with .Get 3 -}}{{ . }}{{ else -}} btn-outline-primary {{end -}}' style='float:right; margin-right:10px;'>
+        {{ with .Get 2 -}}{{ . | safeHTML }}{{ else -}} Recommended {{ end -}}
+    </div>
+    <h3 class='h3 card-title'>
+        {{ with .Get 0 -}}{{ . }}{{ else -}}{{ errorf "No assignment title provided"}}{{ end -}}
+    </h3>
+    <p class='card-text'>
+        {{ with .Inner -}}{{ . }}{{ else -}}{{ errorf "No details provided"}}{{ end -}}
+    </p>
+    <form class='row gx-2 gy-3 email-form' method='post' name='newsletter' onsubmit='subscribeButton.disabled=!0'>
+        <input type='hidden' name='form-name' value='newsletter'>
+        <div class='col-md-4'>
+        </div>
+    </form>
+</div>

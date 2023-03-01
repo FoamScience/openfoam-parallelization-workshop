@@ -1,46 +1,46 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "OpenFOAM Parallelization Workshop"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+titleAddition = "Parallelization in OpenFOAM for HPC deployment"
+description = "A hands-on workshop for OpenFOAM programmers"
 
 ## Documentation
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["opw-logo.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+domainTLD = "openfoam-parallelization-workshop.netlify.app"
+titleHome = "OpenFOAM parallelization workshop"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+twitterSite = "@openfoam-parallelization-workshop"
+twitterCreator = ""
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "OpenFOAM Parallelization Workshop"
+schemaAuthor = "Mohammed Elwardi Fadeli"
+#schemaAuthorTwitter = "https://twitter.com/henkverlinde"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/elwardi-fadeli/"
+schemaAuthorGitHub = "https://github.com/FoamScience"
 schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
-schemaLogoWidth = 512
-schemaLogoHeight = 512
+schemaLogoWidth = 500
+schemaLogoHeight = 500
 schemaImage = "doks.png"
-schemaImageWidth = 1280
-schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
-schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaImageWidth = 500
+schemaImageHeight = 500
+#schemaTwitter = "https://twitter.com/getdoks"
+schemaLinkedIn = "https://www.linkedin.com/company/nhr4ces/"
+schemaGitHub = ""
 schemaSection = "blog"
 
 ## Sitelinks Search Box
-siteLinksSearchBox = false
+siteLinksSearchBox = true
 
 ## Chrome Browser
 themeColor = "#fff"
@@ -65,29 +65,29 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Supported by <a href='https://nhr4ces.de'>NHR4CES</a> - SDL Energy Conversion <br> Cookies are not used to collect anything. <br> Copyright (c) 2022-2023 Mohammed Elwardi Fadeli, based on <a href='https://getdoks.org/'>doks</a> with <a href='https://gohugo.io/'>Hugo</a>"
 
 # Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = "Copyright (c) 2022-2023 Mohammed Elwardi Fadeli"
 
 # Alert
-alert = false
+alert = true
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+alertText = "Hands-on sessions will be hosted live. Please register at eveeno.com!"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/FoamScience"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false
-lastMod = false
+lastMod = true
 
 [sections]
-  sectionNav = ["docs", "guides"]
+  sectionNav = ["workshop"]
 
 [options]
   lazySizes = true
@@ -98,12 +98,12 @@ lastMod = false
   searchSectionsIndex = []
   darkMode = true
   bootStrapJs = true
-  breadCrumb = false
+  breadCrumb = true
   highLight = true
   kaTex = false
   multilingualMode = false
   docsVersioning = false
-  fullWidth = false
+  fullWidth = true
   navbarSticky = true
   toTopButton = false
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1

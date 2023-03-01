@@ -580,3 +580,26 @@ $navbar-dark-active-color:          $link-color-dark;
   background: $body-overlay-dark;
   border: 1px solid $body-overlay-dark;
 }
+
+.logo-custom {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(logo-white.png) no-repeat;
+  background-size: contain, cover;
+  background-position: center;
+  height:40% !important;
+  padding: 100px;
+}
+
+[data-dark-mode] .logo-custom {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(logo-black.png) no-repeat;
+  background-size: contain, cover;
+  background-position: center;
+  height:40% !important;
+  padding: 100px;
+}
+

@@ -1,22 +1,121 @@
 {{ define "main" }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
+    <div class="col-lg-4 text-center">
+        <div class="logo-custom"> </div>
       <h1 class="mt-0">{{ .Title }}</h1>
     </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>
+    <div class="col-lg-15 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }} </br></p>
+      <div class="mermaid bg-light text-center" style="margin:auto; margin-bottom: 20px;">
+      %%{init: {'theme':'dark'}}%%
+      flowchart LR
+          subgraph one[<b>First day</b>]
+          subgraph dum1[ ]
+          A("03.04.2023 (4hrs)")
+          E[Lecture part<br>goes live on the website]
+          F[Instructions for<br>environment setup]
+          end
+          end
+          subgraph two[<b>Second day</b>]
+          subgraph dum2[ ]
+          B("13.04.2023 (5hrs from 10 AM)")
+          C[Lecture discussions]
+          D[Hands-on sessions]
+          end
+          end
+
+          Z((" "))
+          Y["Discuss lecture <br> questions on Discord"]
+      
+          C -.- B 
+          D -.- B
+      
+          E -.- A
+          F -.- A
+          A === Z
+          Z ==> B
+          Z -.- Y
+      
+          classDef Title fill:none,stroke:none;
+          class dum1,dum2 Title
+      
+          classDef graphDate fill-opacity:0.15,color:#E1B028
+          classDef date fill-opacity:0.85,color:#FFFFFF,fill:#1d0e4e
+          class one,two graphDate
+          class A,B date
+      </div>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="/workshop/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}/prologue/prereqs/" role="button">{{ i18n "get-started" }}</a>
+      <p>
+      <br></br>
+            Participants will be introduced to the different concepts of parallelization around OpenFOAM code, along with relevant examples for illustration.
+            We'll also focus on hands-on exercises related to MPI communications to deepen and solidify the transferred knowledge.
+            <br>
+            <ul>
+                <li> The lecture part of the workshop (~2-hours) will be published online on the first day of the workshop.</li>
+                <li> On the second day, we'll hold a 5-hours hands-on session to go through exercises.</li>
+                <li> We'll organize a short session to discuss any questions about the published content if there is a need to.</li>
+            </ul>
+      </p>
+      <!--<p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ $data := getJSON "/package.json" }}{{ $data.version }}</a></p>-->
     </div>
   </div>
 </section>
+<section class="section section-featured mt-3 bg-light py-5">
+    <div class="container">
+        <h2 class="h3 mt-0 text-center">More relevant trainings from NHR4CES and friends</h2>
+        <div class="row justify-content-center mt-3 g-4">
+            <div class="col-sm-8 col-md-6 col-xl-4">
+                <div class="card h-30">
+                    <figure class="card-img-top">
+                        <img class="img-fluid blur-up lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="images/ML_Flame_rendering-vertical_mark-1.png" alt="ML Training" sizes="298px" width="1400" height="900">
+                    </figure>
+                    <a class="card-link stretched-link text-dark text-decoration-none" href="https://www.nhr4ces.de/community-workshop-2023/"><span class="visually-hidden">Machine learning Community workshop 2023</span></a>
+                </div>
+                <h3>Machine learning in Computational Fluid Dynamics</h3>
+                <p>A community-workshop where emerging ML areas that are promising for CFD, as well as some potential limitations, will be discussed.</p>
+            </div>
+            <div class="col-sm-8 col-md-6 col-xl-4">
+                <div class="card h-30">
+                    <figure class="card-img-top">
+                        <img class="img-fluid blur-up lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="/images/jupyter-rwth.png" alt="HPC introduction" sizes="298px" width="1440" height="900">
+                    </figure>
+                    <a class="card-link stretched-link text-dark text-decoration-none" href="https://www.nhr4ces.de/2023-04-12-training-introduction-to-interactive-hpc-with-jupyterhub-at-the-rwth/">
+                        <span class="visually-hidden">Workshop on JupyterHub at the RWTH</span>
+                    </a>
+                </div>
+                <h3>Introduction to the Lichtenberg HPC</h3>
+            </div>
+            <div class="col-sm-8 col-md-6 col-xl-4">
+                <div class="card h-30">
+                    <figure class="card-img-top">
+                        <img class="img-fluid blur-up lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_20x0_resize_box_3.png" data-srcset="/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_900x0_resize_box_3.png 900w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_800x0_resize_box_3.png 800w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_700x0_resize_box_3.png 700w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_600x0_resize_box_3.png 600w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_500x0_resize_box_3.png 500w" alt="Meshing in OpenFOAM" sizes="298px" srcset="/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_900x0_resize_box_3.png 900w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_800x0_resize_box_3.png 800w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_700x0_resize_box_3.png 700w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_600x0_resize_box_3.png 600w,/showcase/prometheus-operator/prometheus-operator_hu57de4f26ab67dd37064f040c26445745_110863_500x0_resize_box_3.png 500w" width="1440" height="900">
+                    </figure>
+                    <a class="card-link stretched-link text-dark text-decoration-none" href="/showcase/prometheus-operator/"><span class="visually-hidden">Prometheus Operator</span></a>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6 col-xl-4">
+                <div class="card h-30">
+                    <figure class="card-img-top">
+                        <img class="img-fluid blur-up lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_20x0_resize_box_3.png" data-srcset="/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_900x0_resize_box_3.png 900w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_800x0_resize_box_3.png 800w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_700x0_resize_box_3.png 700w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_600x0_resize_box_3.png 600w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_500x0_resize_box_3.png 500w" alt="Linux introduction" sizes="298px" srcset="/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_900x0_resize_box_3.png 900w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_800x0_resize_box_3.png 800w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_700x0_resize_box_3.png 700w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_600x0_resize_box_3.png 600w,/showcase/litestream/litestream_huc68b7f2c5847d1af5375062b6c11a883_99992_500x0_resize_box_3.png 500w" width="1440" height="900">
+                    </figure>
+                    <a class="card-link stretched-link text-dark text-decoration-none" href="/showcase/litestream/">
+                        <span class="visually-hidden">Litestream</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4 mb-0"><a href="https://www.nhr4ces.de/events/">View all Trainings →</a></p>
+    </div>
+</section>
 {{ end }}
+
 
 {{ define "sidebar-prefooter" }}
   {{ if eq $.Site.Language.LanguageName "English" }}
   <section class="section section-sm">
     <div class="container">
+      <!--
       <div class="row justify-content-center text-center">
         <div class="col-lg-5">
           <h2 class="h4">Security aware</h2>
@@ -45,6 +144,7 @@
           <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
         </div>
       </div>
+      -->
     </div>
   </section>
   {{ end }}

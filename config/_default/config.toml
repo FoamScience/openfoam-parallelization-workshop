@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://3925-2a02-908-1864-7fc0-944d-b241-e709-cd55.eu.ngrok.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -108,3 +108,8 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/@hyas/images/layouts"
     target = "layouts"
+
+[[headers]]
+  for = "/fonts/vendor/jost/*"
+    [headers.values]
+    Access-Control-Allow-Origin= "*"

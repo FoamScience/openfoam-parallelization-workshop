@@ -8,7 +8,8 @@
 @import "bootstrap/scss/bootstrap";
 
 /** Import highlight.js */
-// @import "highlight.js/scss/github-dark-dimmed";
+//@import "highlight.js/scss/magula";
+@import "highlight.js/scss/github-dark-dimmed";
 
 /** Import KaTeX */
 @import "katex/dist/katex";
@@ -33,3 +34,5 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
+
+@import "custom";

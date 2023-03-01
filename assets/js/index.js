@@ -78,9 +78,8 @@ Source:
 
   // Not yet supported: https://github.com/nextapps-de/flexsearch#complex-documents
 
-  /*
   var docs = [
-    {{ range $index, $page := (where .Site.Pages "Section" "docs") -}}
+    {{ range $index, $page := (where .Site.Pages "Section" "workshop") -}}
       {
         id: {{ $index }},
         href: "{{ .Permalink }}",
@@ -90,7 +89,6 @@ Source:
       },
     {{ end -}}
   ];
-  */
 
   // https://discourse.gohugo.io/t/range-length-or-last-element/3803/2
 
@@ -105,7 +103,7 @@ Source:
   {{- end }}
   {{- end }}
   {{- else }}
-  {{- $list = (where .Site.Pages "Section" "docs") }}
+  {{- $list = (where .Site.Pages "Section" "workshop") }}
   {{- end }}
 
   {{ $len := (len $list) -}}
