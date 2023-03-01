@@ -1,4 +1,4 @@
-baseurl = "https://foamscience.github.io/openfoam-parallelization-workshop"
+baseurl = "https://openfoam-parallelization-workshop.github.io"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
