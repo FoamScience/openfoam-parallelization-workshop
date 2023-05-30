@@ -56,7 +56,7 @@
     "katex": "^0.16",
     "lazysizes": "^5.3",
     "markdownlint-cli2": "^0.4.0",
-    "mermaid": "^9.3.0",
+    "mermaid": "^10.2.0",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2",
     "postcss": "^8.4",
